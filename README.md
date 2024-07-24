@@ -5,7 +5,7 @@
 - ## 插件版本信息
 | gradle  | android gradle  | kotlin-gradle  |
 |:----------|:----------|:----------|
-| 7.6   | 7.4.0    | 1.7.10    |
+| 7.6   | 7.4.0    | 1.8.10    |
 
 - ## 其他版本信息
 | compileSdk  | minSdk  | targetSdk |
