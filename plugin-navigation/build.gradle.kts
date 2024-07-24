@@ -13,8 +13,8 @@ dependencies {
     implementation(gradleApi())
     implementation(kotlin("stdlib"))
     implementation(libs.bundles.nav.plugin)
-//    implementation(project(":plugin-navigation-runtime"))
-    implementation("com.jiali.android:plugin-navigation-runtime:1.0-SNAPSHOT")
+    implementation(project(":plugin-navigation-runtime"))
+//    implementation("com.jiali.android:plugin-navigation-runtime:1.0-SNAPSHOT")
 }
 
 publishing {
@@ -23,7 +23,7 @@ publishing {
             from(components["java"])
             groupId = "com.jiali.android"
             artifactId = "plugin-navigation"
-            version = "1.0-SNAPSHOT"
+            version = "1.1-SNAPSHOT"
         }
     }
     repositories {

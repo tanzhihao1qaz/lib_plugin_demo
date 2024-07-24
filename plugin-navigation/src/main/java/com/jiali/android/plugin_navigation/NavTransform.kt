@@ -42,15 +42,14 @@ class NavTransform(private val project: Project) : Transform() {
     private val navDataList = mutableListOf<NavData>()
 
     companion object {
-        const val NAV_RUNTIME_DESTINATION = "Lcom/sleepingcat/nav_plugin_runtime/NavDestination;"
-        const val NAV_RUNTIME_NAV_TYPE = "Lcom/sleepingcat/nav_plugin_runtime/NavDestination\$NavType;"
+        const val NAV_RUNTIME_DESTINATION = "Lcom/jiali/android/plugin_navigation_runtime/NavDestination;"
         private const val KEY_ROUTE = "route"  // NavDestination注解里定义的route成员变量
         private const val KEY_TYPE = "type" // NavDestination注解里定义的type成员变量
         private const val KEY_NAV_GRAPH_ROUTE = "navGraphRoute" // NavDestination注解里定义的navGroupRoute成员变量
         private const val KEY_IS_STARTER = "isStart" // NavDestination注解里定义的isStart成员变量
         private const val KEY_DEEPLINK = "deeplink" // NavDestination注解里定义的deeplink成员变量
 
-        private const val NAV_RUNTIME_PKG_NAME = "com.sleepingcat.nav_plugin_runtime"
+        private const val NAV_RUNTIME_PKG_NAME = "com.jiali.android.plugin_navigation_runtime"
         private const val NAV_RUNTIME_REGISTRY_CLASS_NAME = "NavRegistry" // 自定的
         private const val NAV_RUNTIME_DATA_CLASS_NAME = "NavData" // 自定的
         private const val NAV_RUNTIME_NAV_LIST = "navList" // 自定的

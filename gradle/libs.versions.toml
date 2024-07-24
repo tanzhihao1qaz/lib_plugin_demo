@@ -1,7 +1,7 @@
 [versions]
 agp = "7.4.0"
-kotlin = "1.7.10"
-core-ktx = "1.13.1"
+kotlin = "1.8.10"
+core-ktx = "1.8.0"
 coroutines = "1.7.2" #不能再高了
 appcompat = "1.6.1" #不能使用1.7打后，除非gralde升级到8.+
 material = "1.12.0"
