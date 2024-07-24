@@ -2,6 +2,7 @@
 agp = "7.4.0"
 kotlin = "1.7.10"
 core-ktx = "1.13.1"
+coroutines = "1.7.2" #不能再高了
 appcompat = "1.6.1" #不能使用1.7打后，除非gralde升级到8.+
 material = "1.12.0"
 livedata-viewmodel-lifecycle = "2.7.0" #不能使用2.8打后，除非gralde升级到8.+
@@ -24,8 +25,8 @@ extJunit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVe
 espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 # kt
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "core-ktx" }
-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "core-ktx" }
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 # app
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version = "1.6.2" }
@@ -67,6 +68,8 @@ okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-i
 mmkv = { group = "com.tencent", name = "com.tencent", version = "1.3.7" }
 # 图片
 coil = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
+# alibaba
+fast-json = { group = "com.alibaba.fastjson2", name = "fastjson2", version = "2.0.52" }
 
 
 [plugins]
@@ -81,7 +84,7 @@ gradle-publish = { id = "com.gradle.plugin-publish", version = "1.1.0" }
 nav-plugin = { id = "io.github.tanzhihao1qaz.nav-plugin", version = "1.0" }
 
 [bundles]
-navPlugin = ["asm", "asm-tree", "kotlinpoet", "commons-io", "gradle"]
+nav-plugin = ["asm", "asm-tree", "kotlinpoet", "commons-io", "gradle"]
 app = ["appcompat", "fragment-ktx", "constraint-layout", "material"]
 kt = ["core-ktx", "coroutines", "coroutines-android"]
 jetpack = ["lifecycle", "livedata", "viewmodel", "navigation-fragment", "navigation", "start-up"]

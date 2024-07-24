@@ -6,7 +6,7 @@ plugins {
 catalog {
     versionCatalog {
         // 从文件中导入
-        from(files("./libs.versions.toml"))
+        from(files("./jl.versions.toml"))
     }
 }
 
@@ -16,7 +16,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "com.jiali.android"
             artifactId = "catalog"
-            version = "1.1-SNAPSHOT"
+            version = "1.1.3-SNAPSHOT"
         }
     }
     repositories {
