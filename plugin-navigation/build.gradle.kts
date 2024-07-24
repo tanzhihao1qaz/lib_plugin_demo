@@ -1,8 +1,7 @@
 plugins {
     id("java-library")
     alias(libs.plugins.kotlin.jvm)
-    `kotlin-dsl`
-    id("maven-publish") // 这个是发布本地用的
+    id("maven-publish")
 }
 
 java {
@@ -12,17 +11,19 @@ java {
 
 dependencies {
     implementation(gradleApi())
-    implementation("com.android.tools.build:gradle:7.4.0")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
+    implementation(kotlin("stdlib"))
+    implementation(libs.bundles.nav.plugin)
+//    implementation(project(":plugin-navigation-runtime"))
+    implementation("com.jiali.android:plugin-navigation-runtime:1.0-SNAPSHOT")
 }
 
 publishing {
     publications {
-        create<MavenPublication>("common-gradle-setup") {
+        create<MavenPublication>("plugin-navigation") {
             from(components["java"])
             groupId = "com.jiali.android"
-            artifactId = "common-gradle-setup"
-            version = "1.5-SNAPSHOT"
+            artifactId = "plugin-navigation"
+            version = "1.0-SNAPSHOT"
         }
     }
     repositories {

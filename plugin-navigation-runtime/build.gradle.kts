@@ -1,8 +1,7 @@
 plugins {
     id("java-library")
     alias(libs.plugins.kotlin.jvm)
-    `kotlin-dsl`
-    id("maven-publish") // 这个是发布本地用的
+    id("maven-publish")
 }
 
 java {
@@ -10,19 +9,13 @@ java {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-dependencies {
-    implementation(gradleApi())
-    implementation("com.android.tools.build:gradle:7.4.0")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
-}
-
 publishing {
     publications {
-        create<MavenPublication>("common-gradle-setup") {
+        create<MavenPublication>("plugin-navigation-runtime") {
             from(components["java"])
             groupId = "com.jiali.android"
-            artifactId = "common-gradle-setup"
-            version = "1.5-SNAPSHOT"
+            artifactId = "plugin-navigation-runtime"
+            version = "1.0-SNAPSHOT"
         }
     }
     repositories {

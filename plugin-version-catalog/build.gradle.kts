@@ -6,7 +6,7 @@ plugins {
 catalog {
     versionCatalog {
         // 从文件中导入
-        from(files("./jl.versions.toml"))
+        from(files("../gradle/libs.versions.toml"))
     }
 }
 
