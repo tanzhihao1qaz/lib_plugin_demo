@@ -65,7 +65,7 @@ rxhttp-compiler = { group = "com.github.liujingxing.rxhttp", name = "rxhttp-comp
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 # mmkv
-mmkv = { group = "com.tencent", name = "mmkv", version = "1.3.7" }
+mmkv = { group = "com.tencent", name = "com.tencent", version = "1.3.7" }
 # 图片
 coil = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
 # alibaba
