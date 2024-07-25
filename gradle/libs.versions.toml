@@ -7,15 +7,9 @@ appcompat = "1.6.1" #不能使用1.7打后，除非gralde升级到8.+
 material = "1.12.0"
 livedata-viewmodel-lifecycle = "2.7.0" #不能使用2.8打后，除非gralde升级到8.+
 navigation = "2.7.7" #不能使用2.8打后，除非gralde升级到8.+
-complieSdk = "34"
-minSdk = "24"
-targetSdk = "33"
 junit = "4.14-SNAPSHOT"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-objectBox = "4.0.1"
-rxhttp = "3.2.7"
-okhttp = "4.12.0"
 auto = "1.1.1"
 asm = "9.2"
 
@@ -30,7 +24,7 @@ coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutin
 # app
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version = "1.6.2" }
-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout" }
+constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version = "2.1.4" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 # jetpack
 lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "livedata-viewmodel-lifecycle" }
@@ -42,34 +36,14 @@ start-up = { group = "androidx.startup", name = "startup-runtime", version = "1.
 # google
 auto-service = { group = "com.google.auto.service", name = "auto-service", version.ref = "auto" }
 auto-service-annotation = { group = "com.google.auto.service", name = "auto-service-annotations", version.ref = "auto" }
+# 图片
+coil = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
 # navPlugin用
 asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
 asm-tree = { group = "org.ow2.asm", name = "asm-tree", version.ref = "asm" }
 kotlinpoet = { group = "com.squareup", name = "kotlinpoet", version = "1.10.2" }
 commons-io = { group = "commons-io", name = "commons-io", version = "2.6" }
 gradle = { group = "com.android.tools.build", name = "gradle", version = "7.4.2" }
-# 西门子PLC通讯用的，不支持串口
-hsl = { group = "com.github.dathlin", name = "HslCommunication", version = "9.0.0" }
-# 三菱、欧姆龙串口通讯用的
-serialport = { group = "io.github.xmaihh", name = "serialport", version = "2.1.1" }
-# 数据库
-objectBox = { group = "io.objectbox", name = "objectbox-gradle-plugin", version.ref = "objectBox" }
-objectBox-kotlin = { group = "io.objectbox", name = "objectbox-kotlin", version.ref = "objectBox" } # 针对kt做的扩展，方便开发，文档：https://docs.objectbox.io/kotlin-support
-# client用来接收推送（预约停、取、缴费的操作），server用来接收车牌识别机传来的车牌信息（此时app作为服务器），旧项目是分来两个第三方库，client用easySocket，server用Httpd
-ok-socket-client = { group = "com.tonystark.android", name = "socket", version = "4.2.1" }
-ok-socket-server = { group = "com.tonystark.android", name = "socket-server", version = "4.2.1" }
-# 网络请求（okhttp是rxhttp必要依赖）
-rxhttp = { group = "com.github.liujingxing.rxhttp", name = "rxhttp", version.ref = "rxhttp" }
-rxhttp-converter = { group = "com.github.liujingxing.rxhttp", name = "converter-fastjson", version.ref = "rxhttp" }
-rxhttp-compiler = { group = "com.github.liujingxing.rxhttp", name = "rxhttp-compiler", version.ref = "rxhttp" }
-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
-okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
-# mmkv
-mmkv = { group = "com.tencent", name = "mmkv", version = "1.3.7" }
-# 图片
-coil = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
-# alibaba
-fast-json = { group = "com.alibaba.fastjson2", name = "fastjson2", version = "2.0.52" }
 
 
 [plugins]
@@ -78,14 +52,12 @@ android-app = { id = "com.android.application", version.ref = "agp" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-aop = { id = "io.github.FlyJingFish.AndroidAop.android-aop", version = "1.9.7" }
 ksp = { id = "com.google.devtools.ksp", version = "1.8.22-1.0.11" }
 gradle-publish = { id = "com.gradle.plugin-publish", version = "1.1.0" }
-nav-plugin = { id = "io.github.tanzhihao1qaz.nav-plugin", version = "1.0" }
 
 [bundles]
-nav-plugin = ["asm", "asm-tree", "kotlinpoet", "commons-io", "gradle"]
 app = ["appcompat", "fragment-ktx", "constraint-layout", "material"]
 kt = ["core-ktx", "coroutines", "coroutines-android"]
 jetpack = ["lifecycle", "livedata", "viewmodel", "navigation-fragment", "navigation", "start-up"]
-http = ["rxhttp", "rxhttp-converter", "rxhttp-compiler", "okhttp", "okhttp-logging-interceptor"]
+nav-plugin = ["asm", "asm-tree", "kotlinpoet", "commons-io", "gradle"]
+
