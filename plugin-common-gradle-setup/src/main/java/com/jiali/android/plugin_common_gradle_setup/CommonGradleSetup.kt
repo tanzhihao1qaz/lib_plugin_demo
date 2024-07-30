@@ -60,10 +60,9 @@ class CommonGradleSetup : Plugin<Project> {
 
     private fun handleLibrary(target: Project, extension: LibraryExtension) {
         extension.apply {
-            compileSdk = 34 // 不能低于34，不知道为啥低于的话发布的时候编译失败
+            compileSdk = 34
             defaultConfig {
                 minSdk = 24
-                targetSdk = 33
 
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             }
