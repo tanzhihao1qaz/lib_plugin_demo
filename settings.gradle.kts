@@ -1,21 +1,28 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
+        maven {
+            isAllowInsecureProtocol = true
+            url = uri("http://192.168.101.123:8081/repository/android-repos-google/")
+            credentials {
+                username = "admin"
+                password = "jl123456"
             }
         }
-        mavenCentral()
-        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        repositories {
+            maven {
+                isAllowInsecureProtocol = true
+                url = uri("http://192.168.101.123:8081/repository/android-repos-google/")
+                credentials {
+                    username = "admin"
+                    password = "jl123456"
+                }
+            }
+        }
         maven {
             isAllowInsecureProtocol = true
             url = uri("http://192.168.101.123:8081/repository/jiali/")
