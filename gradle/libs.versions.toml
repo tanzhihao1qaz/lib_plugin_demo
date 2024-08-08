@@ -12,6 +12,7 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 auto = "1.1.1"
 asm = "9.2"
+moshi = "1.13.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -36,6 +37,10 @@ start-up = { group = "androidx.startup", name = "startup-runtime", version = "1.
 # google
 auto-service = { group = "com.google.auto.service", name = "auto-service", version.ref = "auto" }
 auto-service-annotation = { group = "com.google.auto.service", name = "auto-service-annotations", version.ref = "auto" }
+# moshi 序列化/反序列化框架
+moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi" }
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
 # 图片
 coil = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
 # navPlugin用

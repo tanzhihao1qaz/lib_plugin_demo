@@ -55,7 +55,11 @@ class CommonGradleSetup : Plugin<Project> {
                 resolutionStrategy.cacheChangingModulesFor(0, "minutes")
             }
         }
-
+        target.dependencies.apply {
+            add("implementation", CatalogUtil.getCatalog("moshi", CatalogUtil.Type.LIBRARY))
+            add("kapt", CatalogUtil.getCatalog("moshi-codegen", CatalogUtil.Type.LIBRARY))
+            add("kapt", CatalogUtil.getCatalog("auto-service", CatalogUtil.Type.LIBRARY))
+        }
     }
 
     private fun handleLibrary(target: Project, extension: LibraryExtension) {

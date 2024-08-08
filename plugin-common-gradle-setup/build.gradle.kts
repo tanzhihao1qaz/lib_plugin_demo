@@ -12,6 +12,9 @@ java {
 
 dependencies {
     implementation(gradleApi())
+    // 解析toml文件
+    implementation("org.tomlj:tomlj:1.1.1")
+    //
     implementation("com.android.tools.build:gradle:7.4.0")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
 }
@@ -22,7 +25,7 @@ publishing {
             from(components["java"])
             groupId = "com.jiali.android"
             artifactId = "common-gradle-setup"
-            version = "1.7-SNAPSHOT"
+            version = "1.8-SNAPSHOT"
         }
     }
     repositories {
