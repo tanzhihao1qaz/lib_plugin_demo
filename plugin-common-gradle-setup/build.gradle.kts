@@ -25,7 +25,7 @@ publishing {
             from(components["java"])
             groupId = "com.jiali.android"
             artifactId = "common-gradle-setup"
-            version = "1.8-SNAPSHOT"
+            version = "1.9-SNAPSHOT"
         }
     }
     repositories {

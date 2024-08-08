@@ -57,6 +57,7 @@ class CommonGradleSetup : Plugin<Project> {
         }
         target.dependencies.apply {
             add("implementation", CatalogUtil.getCatalog("moshi", CatalogUtil.Type.LIBRARY))
+            add("implementation", CatalogUtil.getCatalog("moshi-kotlin", CatalogUtil.Type.LIBRARY))
             add("kapt", CatalogUtil.getCatalog("moshi-codegen", CatalogUtil.Type.LIBRARY))
             add("kapt", CatalogUtil.getCatalog("auto-service", CatalogUtil.Type.LIBRARY))
         }
