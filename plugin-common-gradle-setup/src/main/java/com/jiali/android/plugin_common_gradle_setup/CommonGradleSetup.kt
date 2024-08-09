@@ -56,10 +56,15 @@ class CommonGradleSetup : Plugin<Project> {
             }
         }
         target.dependencies.apply {
-            add("implementation", CatalogUtil.getCatalog("moshi", CatalogUtil.Type.LIBRARY))
+            /*add("implementation", CatalogUtil.getCatalog("moshi", CatalogUtil.Type.LIBRARY))
             add("implementation", CatalogUtil.getCatalog("moshi-kotlin", CatalogUtil.Type.LIBRARY))
             add("kapt", CatalogUtil.getCatalog("moshi-codegen", CatalogUtil.Type.LIBRARY))
-            add("kapt", CatalogUtil.getCatalog("auto-service", CatalogUtil.Type.LIBRARY))
+            add("kapt", CatalogUtil.getCatalog("auto-service", CatalogUtil.Type.LIBRARY))*/
+
+            /*add("implementation", "com.squareup.moshi:moshi:1.13.0")
+            add("implementation", "com.squareup.moshi:moshi-kotlin:1.13.0")
+            add("kapt", "com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+            add("kapt","com.google.auto.service:auto-service:1.1.1")*/
         }
     }
 
@@ -94,11 +99,18 @@ class CommonGradleSetup : Plugin<Project> {
                 resolutionStrategy.cacheChangingModulesFor(0, "minutes")
             }
         }
+
         target.dependencies.apply {
-            add("implementation", CatalogUtil.getCatalog("moshi", CatalogUtil.Type.LIBRARY))
+            /*add("implementation", CatalogUtil.getCatalog("moshi", CatalogUtil.Type.LIBRARY))
             add("implementation", CatalogUtil.getCatalog("moshi-kotlin", CatalogUtil.Type.LIBRARY))
             add("kapt", CatalogUtil.getCatalog("moshi-codegen", CatalogUtil.Type.LIBRARY))
-            add("kapt", CatalogUtil.getCatalog("auto-service", CatalogUtil.Type.LIBRARY))
+            add("kapt", CatalogUtil.getCatalog("auto-service", CatalogUtil.Type.LIBRARY))*/
+
+            /*add("implementation", "com.squareup.moshi:moshi:1.13.0")
+            add("implementation", "com.squareup.moshi:moshi-kotlin:1.13.0")
+            add("kapt", "com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+            add("kapt","com.google.auto.service:auto-service:1.1.1")*/
+
         }
     }
 

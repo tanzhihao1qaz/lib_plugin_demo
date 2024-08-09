@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.app)
     alias(libs.plugins.kotlin.gradle)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -39,4 +40,8 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
+
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    kapt(libs.moshi.codegen)
 }

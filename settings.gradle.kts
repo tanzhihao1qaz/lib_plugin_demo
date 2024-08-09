@@ -22,11 +22,11 @@ dependencyResolutionManagement {
             }
         }
     }
-    versionCatalogs {
+   /* versionCatalogs {
         create("myLibs") {
             from("com.jiali.android:catalog:1.1.6-SNAPSHOT")
         }
-    }
+    }*/
 }
 
 rootProject.name = "lib_plugin_demo"
