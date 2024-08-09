@@ -16,7 +16,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "com.jiali.android"
             artifactId = "catalog"
-            version = "1.1.8-SNAPSHOT"
+            version = "1.0.0-SNAPSHOT"
         }
     }
     repositories {

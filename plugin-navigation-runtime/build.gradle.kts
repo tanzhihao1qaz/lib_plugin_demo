@@ -15,7 +15,7 @@ publishing {
             from(components["java"])
             groupId = "com.jiali.android"
             artifactId = "plugin-navigation-runtime"
-            version = "1.1-SNAPSHOT"
+            version = "1.0.0-SNAPSHOT"
         }
     }
     repositories {
