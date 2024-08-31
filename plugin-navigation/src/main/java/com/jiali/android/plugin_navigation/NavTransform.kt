@@ -132,7 +132,10 @@ class NavTransform(private val project: Project) : Transform() {
                 fileSpec = createFileSpec(appID)
             }
             // 这个是生成在buildConfig的输出目录下
-            val outputFileDir = File("${project.buildDir}/generated/source/buildConfig/${it.dirName}/")
+//            val outputFileDir = File("${project.buildDir}/generated/source/buildConfig/${it.dirName}/")
+            val extension = project.extensions.getByType(NavPluginExtension::class.java)
+            println("NavRegistry file path:${project.rootDir.path}/${extension.navRegistryPath}")
+            val outputFileDir = File("${project.rootDir.path}/${extension.navRegistryPath}/")
             // 这个是生成在main/java/包名（准确的说是android的build.gradle里的sourceSet定义的main路径）
 //            val outputFileDir = android.sourceSets.getByName("main").java.srcDirs.first().absoluteFile
             fileSpec?.writeTo(outputFileDir)

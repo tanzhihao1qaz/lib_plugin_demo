@@ -6,9 +6,14 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.ApplicationPlugin
 
+open class NavPluginExtension {
+    var navRegistryPath: String = "null"
+}
+
 class NavPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         println("NavPlugin apply yeah!!!")
+        project.extensions.create("NavFilePath", NavPluginExtension::class.java)
         val applicationPlugin = project.plugins.findPlugin(ApplicationPlugin::class.java)
         // 这个目的是检查插件是否只在application模块下被加载，此插件不能给module模块加载，因为插件只要应用一次，在打包阶段就能收集全部的class文件
         assert(applicationPlugin == null) {
@@ -18,3 +23,4 @@ class NavPlugin : Plugin<Project> {
         extensions?.registerTransform(NavTransform(project))
     }
 }
+
