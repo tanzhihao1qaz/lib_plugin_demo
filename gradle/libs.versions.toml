@@ -13,6 +13,7 @@ espressoCore = "3.6.1"
 auto = "1.1.1"
 asm = "9.2"
 moshi = "1.15.0"
+objectBox = "4.0.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -49,7 +50,9 @@ asm-tree = { group = "org.ow2.asm", name = "asm-tree", version.ref = "asm" }
 kotlinpoet = { group = "com.squareup", name = "kotlinpoet", version = "1.10.2" }
 commons-io = { group = "commons-io", name = "commons-io", version = "2.6" }
 gradle = { group = "com.android.tools.build", name = "gradle", version = "7.4.2" }
-
+# 数据库
+objectBox = { group = "io.objectbox", name = "objectbox-gradle-plugin", version.ref = "objectBox" }
+objectBox-kotlin = { group = "io.objectbox", name = "objectbox-kotlin", version.ref = "objectBox" } # 针对kt做的扩展，方便开发，文档：https://docs.objectbox.io/kotlin-support
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
