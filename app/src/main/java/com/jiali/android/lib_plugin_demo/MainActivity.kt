@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import java.net.InetAddress
 import java.nio.ByteBuffer
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +24,15 @@ class MainActivity : AppCompatActivity() {
         Log.d("tag", bytesToHex(shortToByteArray(0.toShort())))
         Log.d("tag", bytesToHex(shortToByteArray(1.toShort())))
         Log.d("tag", bytesToHex(shortToByteArray(1.toShort())))*/
-
         Log.d("tag", changeBitValue(0, 5, 1).toString())
+
+        thread {
+           try {
+               Log.d("tag", InetAddress.getByName("parking.fsjlkj.cn").hostAddress ?: "啥都沒有")
+           }catch (e:Exception){
+               Log.d("tag","報錯了：${e.message}")
+           }
+        }
     }
 
     private fun changeBitValue(num: Int, bitPosition: Int, newBitValue: Int): Int {

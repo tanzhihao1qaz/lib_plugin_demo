@@ -14,6 +14,8 @@ auto = "1.1.1"
 asm = "9.2"
 moshi = "1.15.0"
 objectBox = "4.0.1"
+rxhttp = "3.2.7"
+okhttp = "4.12.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -44,6 +46,8 @@ moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.re
 moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
 # 图片
 coil = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
+# recyclerView牛逼框架
+brv = { group = "com.github.liangjingkanji", name = "BRV", version = "1.6.0" }
 # navPlugin用
 asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
 asm-tree = { group = "org.ow2.asm", name = "asm-tree", version.ref = "asm" }
@@ -53,6 +57,16 @@ gradle = { group = "com.android.tools.build", name = "gradle", version = "7.4.2"
 # 数据库
 objectBox = { group = "io.objectbox", name = "objectbox-gradle-plugin", version.ref = "objectBox" }
 objectBox-kotlin = { group = "io.objectbox", name = "objectbox-kotlin", version.ref = "objectBox" } # 针对kt做的扩展，方便开发，文档：https://docs.objectbox.io/kotlin-support
+# 网络请求（okhttp是rxhttp必要依赖）
+rxhttp = { group = "com.github.liujingxing.rxhttp", name = "rxhttp", version.ref = "rxhttp" }
+rxhttp-converter = { group = "com.github.liujingxing.rxhttp", name = "converter-moshi", version.ref = "rxhttp" }
+rxhttp-compiler = { group = "com.github.liujingxing.rxhttp", name = "rxhttp-compiler", version.ref = "rxhttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+# PLC网口通讯
+hsl = { group = "com.github.dathlin", name = "HslCommunication", version = "3.2.0" }
+# PLC串口通讯
+serialport = { group = "io.github.xmaihh", name = "serialport", version = "2.1.1" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
@@ -64,8 +78,10 @@ ksp = { id = "com.google.devtools.ksp", version = "1.8.22-1.0.11" }
 gradle-publish = { id = "com.gradle.plugin-publish", version = "1.1.0" }
 
 [bundles]
-app = ["appcompat", "fragment-ktx", "constraint-layout", "material"]
+app = ["appcompat", "fragment-ktx", "constraint-layout"]
 kt = ["core-ktx", "coroutines", "coroutines-android"]
 jetpack = ["lifecycle", "livedata", "viewmodel", "navigation-fragment", "navigation", "start-up"]
 nav-plugin = ["asm", "asm-tree", "kotlinpoet", "commons-io", "gradle"]
+http = ["rxhttp", "rxhttp-converter", "okhttp", "okhttp-logging-interceptor"]
+objextBox = ["objectBox", "objectBox-kotlin"]
 

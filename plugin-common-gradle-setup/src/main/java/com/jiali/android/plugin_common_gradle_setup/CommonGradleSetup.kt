@@ -29,7 +29,7 @@ class CommonGradleSetup : Plugin<Project> {
             defaultConfig {
                 minSdk = 24
                 targetSdk = 33
-
+                multiDexEnabled = true
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             }
 
