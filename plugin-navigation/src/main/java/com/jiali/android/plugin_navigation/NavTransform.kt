@@ -126,16 +126,18 @@ class NavTransform(private val project: Project) : Transform() {
 
         var fileSpec: FileSpec? = null
         android.applicationVariants.all {
-            val appID = it.applicationId
+            val extension = project.extensions.getByType(NavPluginExtension::class.java)
+            println("NavRegistry file path:${project.rootDir.path}${File.separator}${extension.navRegistryPath}")
+            println("NavRegistry package name:${extension.navRegistryPackageName}")
+
+            val packageName = extension.navRegistryPackageName
             if (fileSpec == null) {
 //                fileSpec = createFileSpec(android.defaultConfig.applicationId!!)
-                fileSpec = createFileSpec(appID)
+                fileSpec = createFileSpec(packageName)
             }
             // 这个是生成在buildConfig的输出目录下
 //            val outputFileDir = File("${project.buildDir}/generated/source/buildConfig/${it.dirName}/")
-            val extension = project.extensions.getByType(NavPluginExtension::class.java)
-            println("NavRegistry file path:${project.rootDir.path}/${extension.navRegistryPath}")
-            val outputFileDir = File("${project.rootDir.path}/${extension.navRegistryPath}/")
+            val outputFileDir = File("${project.rootDir.path}${File.separator}${extension.navRegistryPath}${File.separator}")
             // 这个是生成在main/java/包名（准确的说是android的build.gradle里的sourceSet定义的main路径）
 //            val outputFileDir = android.sourceSets.getByName("main").java.srcDirs.first().absoluteFile
             fileSpec?.writeTo(outputFileDir)
@@ -144,8 +146,6 @@ class NavTransform(private val project: Project) : Transform() {
         // 这个是生成在app的build目录下
         /*val outputFileDir = runtimeProject!!.buildDir.absoluteFile
         fileSpec.writeTo(outputFileDir)*/
-
-
     }
 
     private fun createFileSpec(appId: String): FileSpec {
@@ -180,6 +180,8 @@ class NavTransform(private val project: Project) : Transform() {
             .build()
 
         // 这里的
+        println("appId = $appId")
+        // 参数1是包名
         return FileSpec.builder(appId, NAV_RUNTIME_REGISTRY_CLASS_NAME)
             .addComment("此文件是自动生成，不用编辑它")
             .addType(type)

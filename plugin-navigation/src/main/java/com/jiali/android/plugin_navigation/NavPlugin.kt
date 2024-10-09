@@ -7,7 +7,10 @@ import org.gradle.api.Project
 import org.gradle.api.plugins.ApplicationPlugin
 
 open class NavPluginExtension {
-    var navRegistryPath: String = "null"
+    // 文件生成路径，是相对根目录的路径，一般写到java目录，如：app/src/main/java，效果是：根目录/app/src/main.java
+    var navRegistryPath: String = ""
+    // 文件生成的包名，是在上面的path基础下的包名，如：com.jiali.xx，效果是：根目录/app/src/main.java/com/jiali/xx
+    var navRegistryPackageName: String = ""
 }
 
 class NavPlugin : Plugin<Project> {
