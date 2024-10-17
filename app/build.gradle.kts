@@ -34,13 +34,9 @@ android {
 }
 
 dependencies {
-
     implementation(libs.bundles.app)
     implementation(libs.bundles.kt)
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
-
+    implementation(libs.bundles.jetpack)
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
     kapt(libs.moshi.codegen)

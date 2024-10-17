@@ -2,7 +2,6 @@ package com.jiali.android.lib_plugin_demo
 
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import java.net.InetAddress
 import java.nio.ByteBuffer
@@ -11,7 +10,6 @@ import kotlin.concurrent.thread
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         /*val str = "鲁AD12345  "
         val array = str.toByteArray(charset("GBK"))
