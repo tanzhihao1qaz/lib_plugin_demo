@@ -71,6 +71,12 @@ hsl = { group = "com.github.dathlin", name = "HslCommunication", version = "3.2.
 serialport = { group = "io.github.xmaihh", name = "serialport", version = "2.1.1" }
 # 权限请求
 permissionx = { group = "com.guolindev.permissionx", name = "permissionx", version = "1.8.1" }
+# 日志框架
+xlog = { group = "com.elvishew", name = "xlog", version = "1.11.1" }
+# mmkv
+mmkv = { group = "com.tencent", name = "mmkv", version = "1.3.7" }
+# statusBar（沉浸式状态栏）
+statusBar = { group = "com.github.liangjingkanji", name = "StatusBar", version = "2.0.2" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
