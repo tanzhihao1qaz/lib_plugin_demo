@@ -65,6 +65,8 @@ rxhttp-converter = { group = "com.github.liujingxing.rxhttp", name = "converter-
 rxhttp-compiler = { group = "com.github.liujingxing.rxhttp", name = "rxhttp-compiler", version.ref = "rxhttp" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+# io操作
+okio = { group = "com.squareup.okio", name = "okio", version = "3.9.1" }
 # PLC网口通讯
 hsl = { group = "com.github.dathlin", name = "HslCommunication", version = "3.2.0" }
 # PLC串口通讯
@@ -77,6 +79,8 @@ xlog = { group = "com.elvishew", name = "xlog", version = "1.11.1" }
 mmkv = { group = "com.tencent", name = "mmkv", version = "1.3.7" }
 # statusBar（沉浸式状态栏）
 statusBar = { group = "com.github.liangjingkanji", name = "StatusBar", version = "2.0.2" }
+# rxtol
+rxtool = { group = "com.github.tamsiree.RxTool", name = "RxKit", version = "2.6.3" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
