@@ -27,5 +27,13 @@ publishing {
             }
             url = uri("http://192.168.101.123:8081/repository/jiali/")
         }
+        maven {
+            isAllowInsecureProtocol = true
+            credentials {
+                username = "admin"
+                password = "123456"
+            }
+            url = uri("http://localhost:8081/repository/jiali/")
+        }
     }
 }
