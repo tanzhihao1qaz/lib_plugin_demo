@@ -1,0 +1,36 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.cat.android",
+    "module": "catalog",
+    "version": "1.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "versionCatalogElements",
+      "attributes": {
+        "org.gradle.category": "platform",
+        "org.gradle.usage": "version-catalog"
+      },
+      "files": [
+        {
+          "name": "catalog-1.0.0-SNAPSHOT.toml",
+          "url": "catalog-1.0.0-SNAPSHOT.toml",
+          "size": 5633,
+          "sha512": "ea4ef3e787b5eb5431dbba168b801d2c65e71151ba4df86b35d0722a642f4c61622dfacf3f63eebe565b884ee5216ebca686ba71225950a6f0d21c5ae6fabac0",
+          "sha256": "f7914ff1b85eaa20005199ab9120c87b9c579c64f738d9042e864015669ebacb",
+          "sha1": "8cc02b9c765e9e960ea976d72374144bea76c004",
+          "md5": "3afc15f817812f0daea906836f7ec10e"
+        }
+      ]
+    }
+  ]
+}
