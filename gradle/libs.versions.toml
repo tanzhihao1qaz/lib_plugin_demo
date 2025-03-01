@@ -23,6 +23,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 extJunit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 # kt
+#implemention("androidx.core:core-ktx:1.0")
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
@@ -90,6 +91,8 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version = "1.8.22-1.0.11" }
 gradle-publish = { id = "com.gradle.plugin-publish", version = "1.1.0" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
 
 [bundles]
 app = ["appcompat", "fragment-ktx", "constraint-layout"]
