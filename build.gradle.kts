@@ -4,11 +4,10 @@ buildscript {
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
     }
-    dependencies {
-        classpath("com.github.tanzhihao1qaz.lib_plugin_demo:catalog:1.0")
-    }
+//    dependencies {
+//        classpath("com.github.tanzhihao1qaz.lib_plugin_demo:catalog:1.0")
+//    }
 }
-
 plugins {
     alias(libs.plugins.android.app) apply false
     alias(libs.plugins.kotlin.gradle) apply false

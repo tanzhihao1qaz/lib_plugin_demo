@@ -28,7 +28,7 @@ publishing {
             version = "1.0.0-SNAPSHOT"
         }
     }
-    repositories {
+    /*repositories {
         maven {
             isAllowInsecureProtocol = true
             credentials {
@@ -45,5 +45,5 @@ publishing {
             }
             url = uri("http://localhost:8081/repository/jiali/")
         }
-    }
+    }*/
 }
