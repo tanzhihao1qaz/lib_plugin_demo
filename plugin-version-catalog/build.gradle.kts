@@ -16,7 +16,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "com.cat.android"
             artifactId = "catalog"
-            version = "1.0.0-SNAPSHOT"
+            version = "1.0.0"
         }
     }
     repositories {
