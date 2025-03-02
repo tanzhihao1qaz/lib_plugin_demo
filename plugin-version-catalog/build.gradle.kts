@@ -1,4 +1,5 @@
 plugins {
+    id("java-library")
     id("version-catalog")
     id("maven-publish")
 }
@@ -8,6 +9,11 @@ catalog {
         // 从文件中导入
         from(files("../gradle/libs.versions.toml"))
     }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 publishing {
