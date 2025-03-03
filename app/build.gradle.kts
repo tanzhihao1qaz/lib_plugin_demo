@@ -1,7 +1,9 @@
 plugins {
-    alias(libs.plugins.android.app)
+//    alias(libs.plugins.android.app)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.gradle)
     alias(libs.plugins.kotlin.kapt)
+    id("maven-publish") // 这个是发布本地用的
 }
 
 android {
@@ -9,11 +11,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jiali.android.lib_plugin_demo"
+//        applicationId = "com.jiali.android.lib_plugin_demo"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+//        versionCode = 1
+//        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,4 +42,14 @@ dependencies {
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
     kapt(libs.moshi.codegen)
+}
+publishing {
+    publications {
+        create<MavenPublication>("app") {
+//            from(components["java"])
+            groupId = "com.jiali.android"
+            artifactId = "app"
+            version = "1.0.0"
+        }
+    }
 }
