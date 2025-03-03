@@ -52,4 +52,10 @@ publishing {
             version = "1.0.0"
         }
     }
+    repositories {
+        // 本地仓库
+        maven {
+            url = uri("../repo")
+        }
+    }
 }
