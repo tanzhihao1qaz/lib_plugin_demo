@@ -27,19 +27,19 @@ publishing {
     }
     repositories {
         // 本地仓库
-        maven {
-            url = uri("../repo")
-        }
-        // 提交到远程仓库
         /*maven {
+            url = uri("../repo")
+        }*/
+        // 提交到远程仓库
+        maven {
             isAllowInsecureProtocol = true
             credentials {
-                username = "admin"
-                password = "jl123456"
+                username = "6531f582e7be53b98df4b4c5"
+                password = "dr9hUm4uSc1q"
             }
-            url = uri("http://192.168.101.123:8081/repository/jiali/")
+            url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
         }
-        maven {
+        /*maven {
             isAllowInsecureProtocol = true
             credentials {
                 username = "admin"

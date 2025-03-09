@@ -23,13 +23,21 @@ publishing {
     publications {
         create<MavenPublication>("common-gradle-setup") {
             from(components["java"])
-            groupId = "com.jiali.android"
+            groupId = "com.cat.android"
             artifactId = "common-gradle-setup"
-            version = "1.0.0-SNAPSHOT"
+            version = "1.0.0"
         }
     }
-    /*repositories {
+    repositories {
         maven {
+            isAllowInsecureProtocol = true
+            credentials {
+                username = "6531f582e7be53b98df4b4c5"
+                password = "dr9hUm4uSc1q"
+            }
+            url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
+        }
+        /*maven {
             isAllowInsecureProtocol = true
             credentials {
                 username = "admin"
@@ -44,6 +52,6 @@ publishing {
                 password = "123456"
             }
             url = uri("http://localhost:8081/repository/jiali/")
-        }
-    }*/
+        }*/
+    }
 }

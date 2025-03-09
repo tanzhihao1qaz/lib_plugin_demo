@@ -13,27 +13,31 @@ publishing {
     publications {
         create<MavenPublication>("plugin-navigation-runtime") {
             from(components["java"])
-            groupId = "com.jiali.android"
+            groupId = "com.cat.android"
             artifactId = "plugin-navigation-runtime"
-            version = "1.0.0-SNAPSHOT"
+            version = "1.0.0"
         }
     }
-    /*repositories {
+    repositories {
+        // 本地仓库
+        /*maven {
+            url = uri("../repo")
+        }*/
         maven {
+            isAllowInsecureProtocol = true
+            credentials {
+                username = "6531f582e7be53b98df4b4c5"
+                password = "dr9hUm4uSc1q"
+            }
+            url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
+        }
+        /*maven {
             isAllowInsecureProtocol = true
             credentials {
                 username = "admin"
                 password = "jl123456"
             }
             url = uri("http://192.168.101.123:8081/repository/jiali/")
-        }
-        maven {
-            isAllowInsecureProtocol = true
-            credentials {
-                username = "admin"
-                password = "123456"
-            }
-            url = uri("http://localhost:8081/repository/jiali/")
-        }
-    }*/
+        }*/
+    }
 }

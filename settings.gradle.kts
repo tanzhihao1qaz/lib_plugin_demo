@@ -20,6 +20,13 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         maven { url = uri("https://jitpack.io") }
+        maven {
+            credentials {
+                username = "6531f582e7be53b98df4b4c5"
+                password = "dr9hUm4uSc1q"
+            }
+            url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -38,6 +45,13 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io/") }
+        maven {
+            credentials {
+                username = "6531f582e7be53b98df4b4c5"
+                password = "dr9hUm4uSc1q"
+            }
+            url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
+        }
     }
 
    /* versionCatalogs {
