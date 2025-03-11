@@ -42,7 +42,7 @@ class NavTransform(private val project: Project) : Transform() {
     private val navDataList = mutableListOf<NavData>()
 
     companion object {
-        const val NAV_RUNTIME_DESTINATION = "Lcom/jiali/android/plugin_navigation_runtime/NavDestination;"
+        const val NAV_RUNTIME_DESTINATION = "Lcom/cat/android/plugin_navigation_runtime/NavDestination;"
         private const val KEY_ROUTE = "route"  // NavDestination注解里定义的route成员变量
         private const val KEY_TYPE = "type" // NavDestination注解里定义的type成员变量
         private const val KEY_NAV_GRAPH_ROUTE = "navGraphRoute" // NavDestination注解里定义的navGroupRoute成员变量
