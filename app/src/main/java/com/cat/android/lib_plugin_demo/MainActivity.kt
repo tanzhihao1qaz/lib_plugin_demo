@@ -3,10 +3,12 @@ package com.cat.android.lib_plugin_demo
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.cat.android.plugin_navigation_runtime.NavDestination
 import java.net.InetAddress
 import java.nio.ByteBuffer
 import kotlin.concurrent.thread
 
+@NavDestination(type = NavDestination.NavType.Activity, isStart = false, route = "/main")
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +27,11 @@ class MainActivity : AppCompatActivity() {
         Log.d("tag", changeBitValue(0, 5, 1).toString())
 
         thread {
-           try {
-               Log.d("tag", InetAddress.getByName("parking.fsjlkj.cn").hostAddress ?: "啥都沒有")
-           }catch (e:Exception){
-               Log.d("tag","報錯了：${e.message}")
-           }
+            try {
+                Log.d("tag", InetAddress.getByName("parking.fsjlkj.cn").hostAddress ?: "啥都沒有")
+            } catch (e: Exception) {
+                Log.d("tag", "報錯了：${e.message}")
+            }
         }
     }
 

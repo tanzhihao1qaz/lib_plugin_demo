@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.gradle)
     alias(libs.plugins.kotlin.kapt)
     id("maven-publish") // 这个是发布本地用的
+    id("nav-plugin-plus")
 }
 
 android {
@@ -40,5 +41,6 @@ dependencies {
     implementation(libs.bundles.jetpack)
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
+    implementation(project(":plugin-navigation-runtime"))
     kapt(libs.moshi.codegen)
 }

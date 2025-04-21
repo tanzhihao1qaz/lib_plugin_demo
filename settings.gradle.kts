@@ -27,6 +27,7 @@ pluginManagement {
             }
             url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
         }
+        mavenLocal()
     }
 }
 dependencyResolutionManagement {
@@ -52,6 +53,7 @@ dependencyResolutionManagement {
             }
             url = uri("https://packages.aliyun.com/6531f58acd1f19fc10797d87/maven/2426451-release-caz7rf")
         }
+        mavenLocal()
     }
 
    /* versionCatalogs {
@@ -67,3 +69,4 @@ include(":plugin-common-gradle-setup")
 include(":plugin-version-catalog")
 include(":plugin-navigation")
 include(":plugin-navigation-runtime")
+include(":plugin_navigation_plus")

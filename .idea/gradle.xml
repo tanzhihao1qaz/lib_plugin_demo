@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/plugin-navigation" />
             <option value="$PROJECT_DIR$/plugin-navigation-runtime" />
             <option value="$PROJECT_DIR$/plugin-version-catalog" />
+            <option value="$PROJECT_DIR$/plugin_navigation_plus" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

@@ -22,8 +22,8 @@ publishing {
         create<MavenPublication>("plugin-navigation") {
             from(components["java"])
             groupId = "com.cat.android"
-            artifactId = "plugin-navigation"
-            version = "1.0.1"
+            artifactId = "plugin-navigation-plus"
+            version = "1.0.0"
         }
     }
     repositories {
