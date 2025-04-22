@@ -9,7 +9,7 @@ import org.objectweb.asm.Opcodes
 import org.objectweb.asm.tree.AnnotationNode
 
 
-class NavClassVisitor(nextVisitor: ClassVisitor) : ClassVisitor(Opcodes.ASM5, nextVisitor) {
+class NavClassVisitor(nextVisitor: ClassVisitor) : ClassVisitor(Opcodes.ASM9, nextVisitor) {
     companion object {
         private const val NAV_RUNTIME_DESTINATION = "Lcom/cat/android/plugin_navigation_runtime/NavDestination;"
         private const val KEY_ROUTE = "route"  // NavDestination注解里定义的route成员变量
@@ -27,9 +27,16 @@ class NavClassVisitor(nextVisitor: ClassVisitor) : ClassVisitor(Opcodes.ASM5, ne
         private const val CREATE_NAV_CODE_MODULE_NAME = "app" // 要在哪个module生成代码
     }
 
+    private var className = ""
+    private val navDataList = mutableListOf<NavData>()
+
+    override fun visit(version: Int, access: Int, name: String?, signature: String?, superName: String?, interfaces: Array<out String>?) {
+        super.visit(version, access, name, signature, superName, interfaces)
+        className = name?.replace("/",".") ?: ""
+    }
+
     override fun visitAnnotation(descriptor: String?, visible: Boolean): AnnotationVisitor {
-        return super.visitAnnotation(descriptor, visible)
-        /*if (descriptor != NAV_RUNTIME_DESTINATION) {
+        if (descriptor != NAV_RUNTIME_DESTINATION) {
             return object : AnnotationNode(Opcodes.ASM9, "") {}
         } else {
             val annotationVisitor = object : AnnotationNode(Opcodes.ASM9, "") {
@@ -63,7 +70,7 @@ class NavClassVisitor(nextVisitor: ClassVisitor) : ClassVisitor(Opcodes.ASM5, ne
                     val navData = NavData(
                         type = type,
                         route = route,
-                        className = classReader.className.replace("/", "."),
+                        className = className,
                         navGraphRoute = navGraphRoute,
                         isStart = isStart,
                         deeplink = deeplink
@@ -72,6 +79,6 @@ class NavClassVisitor(nextVisitor: ClassVisitor) : ClassVisitor(Opcodes.ASM5, ne
                 }
             }
             return annotationVisitor
-        }*/
+        }
     }
 }

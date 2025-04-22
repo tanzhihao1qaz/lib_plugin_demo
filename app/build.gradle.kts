@@ -6,6 +6,10 @@ plugins {
     id("nav-plugin-plus")
 }
 
+NavFilePath {
+    navRegistryPath = "app${File.separator}src${File.separator}main${File.separator}java${File.separator}"
+    navRegistryPackageName = "com.cat.android.lib_plugin_demo"
+}
 android {
     namespace = "com.cat.android.lib_plugin_demo"
     compileSdk = 34
@@ -27,11 +31,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 

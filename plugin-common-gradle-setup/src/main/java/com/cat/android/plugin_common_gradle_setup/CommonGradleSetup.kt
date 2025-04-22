@@ -34,8 +34,8 @@ class CommonGradleSetup : Plugin<Project> {
             }
 
             compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_11
-                targetCompatibility = JavaVersion.VERSION_11
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             }
 
             setupKotlinOptions(this)
@@ -78,8 +78,8 @@ class CommonGradleSetup : Plugin<Project> {
             }
 
             compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_11
-                targetCompatibility = JavaVersion.VERSION_11
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             }
 
             setupKotlinOptions(this)
@@ -118,7 +118,7 @@ class CommonGradleSetup : Plugin<Project> {
         val extensions = (e as ExtensionAware).extensions
         val kotlinOptions = extensions.getByName("kotlinOptions") as KotlinJvmOptions
         kotlinOptions.apply {
-            jvmTarget = JavaVersion.VERSION_11.toString()
+            jvmTarget = JavaVersion.VERSION_17.toString()
         }
     }
 
